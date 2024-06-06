@@ -8,5 +8,13 @@ export default defineConfig({
     optimizeDeps: {
         exclude: ['typescript'],
     },
+    build: {
+        rollupOptions: {
+            output: {
+                // Ensures the 404.html file is included in the output
+                assetFileNames: '[name].[ext]',
+            },
+        },
+    },
 });
 
