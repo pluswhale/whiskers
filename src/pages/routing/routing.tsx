@@ -14,10 +14,10 @@ export const Routing: FC = (): ReactElement => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<AppLayout />}>
-                        <Route path="whiskers/game" element={<MainPage />} />
-                        <Route path="whiskers/buy" element={<BuyPage />} />
+                        <Route path="/whiskers/game" element={<MainPage />} />
+                        <Route path="/whiskers/buy" element={<BuyPage />} />
                     </Route>
-                    <Route path="whiskers" element={<StartScreen />} />
+                    <Route path="/whiskers" element={<StartScreen />} />
 
                     <Route path="*" element={<div>Not found</div>} />
                 </Routes>
