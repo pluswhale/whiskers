@@ -7,7 +7,8 @@ import { Typography } from '../../shared/components/typography';
 
 import styles from './wheel.module.scss';
 import { LottieAnimation } from '../lottie-animation/lottie-animation';
-import coinAnimation from '../../assets/animations/coin-dollar.json';
+// import coinAnimation from '../../assets/animations/coin-dollar.json';
+import testAnimation from '../../assets/animations/test-1.json';
 import { Flip, toast } from 'react-toastify';
 import { SectorData, sectorsData } from './constants';
 import { WHEEL_SPINNING_SECONDS } from '../../shared/libs/constants';
@@ -129,7 +130,7 @@ export const WheelMobile: FC<WheelMobileProps> = ({ isAvailableToSpin, isUserLog
 
             setTimeout(() => {
                 setIsDisplayAnimation(true);
-            }, WHEEL_SPINNING_SECONDS);
+            }, 5_500);
 
             // setTimeout(() => {
             //     if (audioRef.current) {
@@ -410,7 +411,7 @@ export const WheelMobile: FC<WheelMobileProps> = ({ isAvailableToSpin, isUserLog
         <>
             {isDisplayAnimation && (
                 <div className={styles.app__coin_icon_animation}>
-                    <LottieAnimation animationData={coinAnimation} loop={0} autoplay={true} />
+                    <LottieAnimation animationData={testAnimation} loop={1} autoplay={true} />
                 </div>
             )}
             <audio ref={audioRef}>
