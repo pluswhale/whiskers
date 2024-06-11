@@ -108,7 +108,8 @@ export const AppContextProvider: React.FC<{ children: ReactElement | ReactElemen
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const res = await loginUser(tgUser?.id?.toString() || '849293092'); //574813379
+                // if (tgUser?.id?.toString()) {
+                const res = await loginUser(tgUser?.id?.toString() || '574813379'); //574813379
                 if (res) {
                     setUserData(res.user);
                     if (uriParams?.tgWebAppStartParam) {
@@ -117,6 +118,7 @@ export const AppContextProvider: React.FC<{ children: ReactElement | ReactElemen
                         });
                     }
                 }
+                // }
             } catch (error) {
                 console.error('Error during login:', error);
             }
