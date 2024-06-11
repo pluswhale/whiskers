@@ -11,7 +11,7 @@ import { LottieAnimation } from '../lottie-animation/lottie-animation';
 import testAnimation from '../../assets/animations/test-1.json';
 import { Flip, toast } from 'react-toastify';
 import { SectorData, sectorsData } from './constants';
-import { WHEEL_SPINNING_SECONDS } from '../../shared/libs/constants';
+// import { WHEEL_SPINNING_SECONDS } from '../../shared/libs/constants';
 
 interface WheelMobileProps {
     isAvailableToSpin: boolean;

@@ -15,7 +15,7 @@ const StartScreen: FC = (): ReactElement => {
         setTimeout(() => {
             startAudio();
         }, 1000);
-        navigate('/game');
+        navigate('/whiskers/game');
     };
 
     return (
