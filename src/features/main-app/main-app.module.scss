@@ -1,0 +1,58 @@
+.app {
+    position: relative;
+
+    &__wrapper {
+        width: 100vw;
+        height: auto;
+
+        @media screen and (max-width: 600px) {
+            height: calc(100vh - 150px);
+        }
+    }
+
+    &__mute_icon {
+        position: fixed;
+        top: 60%;
+        right: 10%;
+
+        z-index: 1000;
+        .icon {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(3675%) hue-rotate(165deg)
+                brightness(117%) contrast(100%);
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+
+        padding-top: 100px;
+        padding-bottom: 130px;
+
+        @media screen and (max-width: 600px) {
+            padding-top: 40px;
+            padding-bottom: unset;
+        }
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate180 {
+    0% {
+        transform: rotate(0deg); // Start rotation from 0 degrees
+    }
+    100% {
+        transform: rotate(180deg); // Rotate by 180 degrees
+    }
+}
+
